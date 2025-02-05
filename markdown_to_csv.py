@@ -16,6 +16,11 @@ Dependencies:
 Install dependencies:
     pip install pyyaml
 
+### Additional Notes ###
+- The filename (without extension) is included as the first column in the output CSV.
+- Ensure that all Markdown files have properly formatted YAML front matter.
+- If no YAML front matter is found, those files will be skipped.
+
 Author: @jordyarms, gpt-4o
 """
 
@@ -44,14 +49,15 @@ def markdown_to_csv(markdown_folder, output_csv):
                 if len(content) > 1:
                     yaml_data = yaml.safe_load(content[1])
                     if isinstance(yaml_data, dict):
+                        yaml_data['filename'] = os.path.splitext(filename)[0]  # Add filename without extension
                         rows.append(yaml_data)
     
     if rows:
-        # Extract headers dynamically from all YAML keys
+        # Extract headers dynamically from all YAML keys, ensuring 'filename' is first
         headers = set()
         for row in rows:
             headers.update(row.keys())
-        headers = sorted(headers)
+        headers = ['filename'] + sorted(h for h in headers if h != 'filename')
         
         # Write data to CSV
         with open(output_csv, 'w', newline='', encoding='utf-8') as csvfile:
