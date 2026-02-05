@@ -16,6 +16,8 @@ Welcome to the Python Pantry! This repository offers a delightful assortment of 
     ^    Every day I be slithering
 ```
 
+Ascii art adapted from Normand Veilleux's Snake.
+
 Happy coding! 🐍💻
 
 ## Contribute 🍽️
