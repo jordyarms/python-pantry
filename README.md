@@ -2,6 +2,20 @@
 
 Welcome to the Python Pantry! This repository offers a delightful assortment of useful everyday Python scripts.
 
+```
+     _________
+    /         \        ________
+   /  /~~~~~\  \      /        \       ______
+   |  |     |  |     /  /~~~~\  \     /      \      /
+   |  |     |  |     |  |    |  |    /  /~~\  \    //
+   |  |     |  |     |  |    |  |    |  |   \  \__/ /
+   |  |     \  \_____/  /    |  |    |  |    \     /
+  (o  o)     \         /     \  \____/  /     ~~~~~
+   \__/       ~~~~~~~~~       \        /
+    |                          ~~~~~~~~
+    ^    Every day I be slithering
+```
+
 Happy coding! 🐍💻
 
 ## Contribute 🍽️
